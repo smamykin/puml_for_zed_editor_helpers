@@ -1,0 +1,8 @@
+plantuml.jar
+plantuml.jar.download
+*.png
+*.svg
+__pycache__/
+*.py[cod]
+.DS_Store
+.venv/

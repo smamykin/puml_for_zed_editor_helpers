@@ -1,0 +1,11 @@
+@startuml
+skinparam backgroundColor white
+skinparam shadowing false
+title Локальный рендер PlantUML
+actor Пользователь as User
+participant "Zed" as Editor
+participant "PlantUML + Java" as Renderer
+User -> Editor: Сохранить example.puml
+Editor -> Renderer: Запустить задачу рендера
+Renderer --> User: PNG / SVG на этой машине
+@enduml

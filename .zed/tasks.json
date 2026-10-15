@@ -1,0 +1,32 @@
+[
+  {
+    "label": "PlantUML: preview Markdown block at cursor",
+    "command": "python3",
+    "args": ["$ZED_WORKTREE_ROOT/preview_block.py", "$ZED_FILE", "$ZED_ROW"],
+    "save": "current",
+    "reveal": "always",
+    "hide": "on_success",
+    "allow_concurrent_runs": false
+  },
+  {
+    "label": "PlantUML: render current file to PNG",
+    "command": "$ZED_WORKTREE_ROOT/plantuml",
+    "args": ["-charset", "UTF-8", "-failfast2", "-tpng", "$ZED_FILE"],
+    "save": "current",
+    "reveal": "always"
+  },
+  {
+    "label": "PlantUML: render current file to SVG",
+    "command": "$ZED_WORKTREE_ROOT/plantuml",
+    "args": ["-charset", "UTF-8", "-failfast2", "-tsvg", "$ZED_FILE"],
+    "save": "current",
+    "reveal": "always"
+  },
+  {
+    "label": "PlantUML: GUI / watch current directory",
+    "command": "$ZED_WORKTREE_ROOT/plantuml",
+    "args": ["-charset", "UTF-8", "-gui", "$ZED_DIRNAME"],
+    "reveal": "always",
+    "allow_concurrent_runs": false
+  }
+]
